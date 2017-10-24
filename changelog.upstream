@@ -1,3 +1,21 @@
+commit 419478839bbfef706df6235b826b71ffc796a55e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Oct 23 15:14:41 2017 +0200
+
+    - NON_TOR_GATEWAY=""
+    - prevent sys-whonix from being able to access non-torified Qubes Updates Proxy
+    - remove access to 10.137.0.0-10.138.255.255 since not required
+    - allow user tinyproxy to connect to 127.0.0.1 9040 and 5300 where Tor is listening (requried since we are now using NON_TOR_GATEWAY="")
+    - allow loopback outgoing traffic traffic
+    
+    https://github.com/QubesOS/qubes-issues/issues/3201
+
+commit 46cc7d5e81a138222f1eb3dc9aa3ca61785d3a7b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed May 4 22:07:38 2016 +0000
+
+    bumped changelog version
+
 commit 724a0fc0546c83555a008cd1b7b03c048519121a
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 30 18:35:49 2016 +0200
