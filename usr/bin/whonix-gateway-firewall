@@ -356,7 +356,7 @@ ipv4_input_rules() {
    $iptables_cmd -A INPUT -i lo -j ACCEPT
 
    ## Established incoming connections are accepted.
-   $iptables_cmd -A INPUT -m state --state ESTABLISHED -j ACCEPT
+   $iptables_cmd -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
    ## Drop all incoming ICMP traffic by default.
    ## All incoming connections are dropped by default anyway, but should a user
